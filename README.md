@@ -4,6 +4,10 @@
 - lightdm
 - lightdm-webkit2-greeter
 
+### screenshot
+<img src="screenshot.png">
+
+
 ### how to
 1. Extract files of this repository;
 2. Rename folder to `clean-login-theme`;
@@ -13,6 +17,9 @@
 <pre>
     webkit-theme=clean-login-theme
 </pre>
+
+
+
 
 
 =================
