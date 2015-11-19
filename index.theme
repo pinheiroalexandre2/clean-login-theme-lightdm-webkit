@@ -1,0 +1,6 @@
+[theme]
+name=lightdm-webkit-simple-login
+description= Simple greeter theme
+engine=lightdm-webkit-greeter
+url=index.html
+session=mate

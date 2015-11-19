@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="img-wrapper">
+                <span class="helper">
+                </span>
+                <img src="assets/img/avatar.jpg"  class="profile-img">
+            </div>
+            <div class="input-wrapper">
+                <form>
+                    <select tabindex="1" id="user"></select>
+                    <input type="password" tabindex="2" id="pass"  placeholder="Password">
+                    <button type="submit" tabindex="3">
+                        <i class="fa fa-sign-in"></i>
+                    </button>
+                </form>
+                <div id="error-show" class="error-show"></div>
+            </div>
+        </div>
+        <div class="footer">
+
+            <div class="buttonHolder">
+                <button>
+                    <i class="fa fa-power-off" onclick="javascript: lightdm.shutdown();"></i>
+                </button>
+                <button>
+                    <i class="fa fa-refresh" onclick="javascript: lightdm.restart();"></i>
+                </button>
+            </div>
+            <div class="center" id="hostname"></div>
+            <div class="clock" id="nowClock">--:--</div>
+        </div>
+
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
+        <script src="assets/js/mock.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            (function() {
+                /* clock */
+                var updateClock = function(){
+                    var now = new Date();
+                    var hours = now.getHours();
+                    var min = now.getMinutes();
+                    min = (min<10)?("0"+min):(min);
+                    document.getElementById('nowClock').innerHTML = hours+":"+min;
+                    console.log(hours+":"+min);
+                };
+
+                setInterval(function(){
+                    updateClock();
+                }, 5000);
+                updateClock();
+
+            })();
+
+        </script>
+    </body>
+</html>
