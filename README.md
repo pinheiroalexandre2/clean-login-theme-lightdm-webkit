@@ -22,5 +22,5 @@
 
 
 
-=================
+---
 **This theme was based on [simple-login-theme-lightdm-webkit](https://github.com/pinheiroalexandre2/simple-login-theme-lightdm-webkit)**
